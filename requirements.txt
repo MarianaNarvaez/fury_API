@@ -1,0 +1,15 @@
+# Production requirements
+# List all packages that needed during runtime.
+
+# Adds package lookup in Mercado Libre's pypi
+--index-url https://pypi.artifacts.furycloud.io/simple/
+--trusted-host pypi.ml.com
+flask-restx~=0.4
+newrelic==6.*
+******.kvsclient==1.*
+******.connectors==1.*
+pandas==1.3.3
+flask_sqlalchemy==2.4.4
+pyhive[presto]>=0.6.2
+PyAthena[SQLAlchemy]>=1.1
+pybigquery>=0.4.15

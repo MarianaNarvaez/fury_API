@@ -1,0 +1,43 @@
+
+
+
+{% block content %}
+    <form method="POST" action="{{ url_for('gethome') }}">
+        <h2 id='tittle'>Items MeLi</h2> 
+      
+
+        <div id="Btns">
+            <div id="divNuevo">
+                <button type="submit" id="nuevoBtn" name="action" class="btn btn-secondary" value="nuevo">¿Último nuevo?</button>
+                {% if ultimoNuevo==1 %}
+        
+                {% endif %}
+            </div>
+            <div id="divUsado">
+                <button type="submit" id="usadoBtn" name="action" class="btn btn-secondary" value="usado">¿Último usado?</button>
+                {% if ultimoUsado==1 %}
+        
+                {% endif %}
+            </div>
+            <div id="divDates">
+                <input placeholder='Fecha inicio' type="text" name="dateIni">
+                <input placeholder='Fecha fin' type="text" name="dateFin">
+                <button type="submit" id="SearchBtn" name="search" class="btn btn-secondary" value="search">Buscar por fechas</button>
+            </div>
+            <div id="divAdd">
+                <input placeholder='ite_item_id' type="text" name="ite_item_id">
+                <input placeholder='ite_date_created' type="text" name="ite_date_created">
+                <input placeholder='ite_item_title' type="text" name="ite_item_title">
+                <input placeholder='ite_current_price' type="text" name="ite_current_price">
+                <input placeholder='ite_condition' type="text" name="ite_condition">
+                <button type="submit" id="nuevoBtn" name="action" class="btn btn-secondary" value="add">Agregar Item</button>
+            </div>
+            <div id="divDel">
+                <input placeholder='ite_item_id' type="text" name="ite_item_id_del">
+                <button type="submit" id="usadoBtn" name="action" class="btn btn-secondary" value="delete">Borrar</button>
+            </div>
+        </div>
+
+    </form>
+
+{% endblock %}
